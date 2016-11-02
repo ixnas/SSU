@@ -27,8 +27,8 @@ public class Kogel extends SpriteObject implements ICollidableWithGameObjects {
 	 * @param popSound
 	 *            Geluid dat moet klinken als de bel knapt
 	 */
-	public Kogel (Spaceworld world, Sound kogelSound, boolean speler) {
-		super (new Sprite ("src/main/java/nl/han/ica/spaceworld/media/kogel.png"));
+	public Kogel (Spaceworld world, Sound kogelSound, boolean speler, String pad) {
+		super (new Sprite (pad));
 		this.world = world;
 		this.kogelSound = kogelSound;
 		if (speler) {

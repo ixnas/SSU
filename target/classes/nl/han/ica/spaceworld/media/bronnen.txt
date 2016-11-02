@@ -15,8 +15,11 @@ je van alle mediabestanden aangeeft waar ze vandaan
 komen. Dat kan bijvoorbeeld op onderstaande manier:
 
 background.jpg      -> https://commons.wikimedia.org/wiki/File:Undervann0002.jpg
-boards.jpg          -> http://opengameart.org/node/8137
-player.png          -> http://www.widgetworx.com/spritelib/
-pop.mp3             -> http://opengameart.org/content/bubbles-pop (geconverteerd naar mp3)
-Waterworld.mp3    	-> Zelfgemaakt
-zwaardvis.png       -> http://opengameart.org/content/fish-pack
+bg.jpg              -> http://m.teachastronomy.com/astropediaimages/Hyades.jpg
+spelerschip.png     -> Zelfgemaakt
+groenschip.png      -> Zelfgemaakt
+roodschip.png       -> Zelfgemaakt
+levenspakket.png    -> Zelfgemaakt
+kogel.png           -> Zelfgemaakt
+bg.mp3              -> https://www.youtube.com/watch?v=GiM8MOLkaDo
+colt45.wav          -> http://www.freespecialeffects.co.uk/soundfx/weapons/colt45.wav

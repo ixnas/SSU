@@ -59,7 +59,7 @@ public abstract class Enemy extends SpriteObject implements ICollidableWithGameO
 	public void triggerAlarm (String alarmName) {
 		if (isVisible ()) {
 			System.out.println ("YEY");
-			final Kogel k = new Kogel (world, world.kogelSound, false);
+			final Kogel k = new EnemyKogel (world, world.kogelSound);
 			world.addGameObject (k, getX () + getWidth () / 2, getY () + getHeight () + 1);
 			startAlarm ();
 		}

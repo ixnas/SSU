@@ -63,7 +63,7 @@ public class Player extends AnimatedSpriteObject implements ICollidableWithGameO
 		} else if (naarboven) {
 			setCurrentFrameIndex (2);
 			if (kogelKlaar) {
-				final Kogel k = new Kogel (world, world.kogelSound, true);
+				final Kogel k = new PlayerKogel (world, world.kogelSound);
 				world.addGameObject (k, getX () + getWidth () / 2, getY () - 30);
 				kogelKlaar = false;
 			}
