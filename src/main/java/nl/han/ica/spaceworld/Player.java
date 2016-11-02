@@ -17,7 +17,7 @@ import java.util.List;
 public class Player extends AnimatedSpriteObject implements ICollidableWithGameObjects, IAlarmListener {
 
     final int size=50;
-    final int speed = 10;
+    final int speed = 7;
     private final Spaceworld world;
     private int health;
     private boolean kogelKlaar = true;
