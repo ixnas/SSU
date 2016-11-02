@@ -17,10 +17,14 @@ import java.util.List;
 public class Player extends AnimatedSpriteObject implements ICollidableWithGameObjects, IAlarmListener {
 
     final int size=50;
+    final int speed = 10;
     private final Spaceworld world;
     private int health;
     private boolean kogelKlaar = true;
     private double kogelsPerSeconde = 1.6;
+    private boolean naarlinks = false;
+    private boolean naarrechts = false;
+    private boolean naarboven = false;
 
     /**
      * Constructor
@@ -48,16 +52,13 @@ public class Player extends AnimatedSpriteObject implements ICollidableWithGameO
         if (getHealth () <= 0) {
         	world.deleteGameObject (this);
         }
-    }
-    @Override
-    public void keyPressed(int keyCode, char key) {
-        final int speed = 20;
-        if (keyCode == world.LEFT) {
+        if (naarlinks) {
             setDirectionSpeed(270, speed);
             setCurrentFrameIndex(0);
-        }
-        if (keyCode == world.UP) {
-            // schiet
+        } else if (naarrechts) {
+            setDirectionSpeed(90, speed);
+            setCurrentFrameIndex(1);
+        } else if (naarboven) {
         	setCurrentFrameIndex(2);
         	if (kogelKlaar) {
 	        	Kogel k = new Kogel(world, world.kogelSound, true);
@@ -65,13 +66,32 @@ public class Player extends AnimatedSpriteObject implements ICollidableWithGameO
 	        	kogelKlaar = false;
         	}        	
         }
+    }
+    @Override
+    public void keyPressed(int keyCode, char key) {
+        if (keyCode == world.LEFT) {
+        	naarlinks = true;
+        }
+        if (keyCode == world.UP) {
+            // schiet
+        	naarboven = true;
+        }
         if (keyCode == world.RIGHT) {
-            setDirectionSpeed(90, speed);
-            setCurrentFrameIndex(1);
+        	naarrechts = true;
         }
         if (key == ' ') {
             // spaie - terug
         }
+    }
+    
+    public void keyReleased (int keyCode, char key) {
+    	if (keyCode == world.LEFT) {
+    		naarlinks = false;
+    	} else if (keyCode == world.RIGHT) {
+    		naarrechts = false;
+    	} else if (keyCode == world.UP) {
+    		naarboven = false;
+    	}
     }
     
     public int getHealth () {
