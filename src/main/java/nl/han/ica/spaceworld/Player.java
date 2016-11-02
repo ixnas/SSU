@@ -116,7 +116,7 @@ public class Player extends AnimatedSpriteObject implements ICollidableWithGameO
 			}
 		}
 	}
-	
+
 	private void startAlarm () {
 		final double alarmTijd = 1 / kogelsPerSeconde;
 		final Alarm alarm = new Alarm ("Kogel klaar", alarmTijd);

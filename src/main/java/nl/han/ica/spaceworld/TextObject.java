@@ -21,7 +21,6 @@ public class TextObject extends GameObject {
 
 	@Override
 	public void update () {
-
 	}
 
 	@Override

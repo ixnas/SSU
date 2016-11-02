@@ -41,7 +41,7 @@ public class EnemySpawner implements IAlarmListener {
 	public void triggerAlarm (String alarmName) {
 		// type enemy bepalen
 		final int enemyType = random.nextInt (100) + 0;
-		enemysPerSecond = world.geefScore ()/100+1;
+		enemysPerSecond = world.geefScore () / 100 + 1;
 
 		// enemy aanmaken
 		if (enemyType >= 0 && enemyType <= 60) {

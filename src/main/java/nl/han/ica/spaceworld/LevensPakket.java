@@ -8,7 +8,7 @@ import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.SpriteObject;
 
 public class LevensPakket extends SpriteObject implements ICollidableWithGameObjects {
-	
+
 	private Spaceworld world;
 
 	public LevensPakket (Spaceworld world) {
@@ -16,13 +16,13 @@ public class LevensPakket extends SpriteObject implements ICollidableWithGameObj
 		this.world = world;
 		setySpeed (1);
 	}
-	
+
 	public void update () {
 		if (getY () > world.getHeight () + getHeight ()) {
 			world.deleteGameObject (this);
 		}
 	}
-	
+
 	public void gameObjectCollisionOccurred (List <GameObject> collidedGameObjects) {
 		for (final GameObject g : collidedGameObjects) {
 			if (g instanceof Player) {
