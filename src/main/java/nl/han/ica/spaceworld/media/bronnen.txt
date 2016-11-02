@@ -17,6 +17,7 @@ komen. Dat kan bijvoorbeeld op onderstaande manier:
 background.jpg      -> https://commons.wikimedia.org/wiki/File:Undervann0002.jpg
 bg.jpg              -> http://m.teachastronomy.com/astropediaimages/Hyades.jpg
 spelerschip.png     -> Zelfgemaakt
+blauwschip.png      -> Zelfgemaakt
 groenschip.png      -> Zelfgemaakt
 roodschip.png       -> Zelfgemaakt
 levenspakket.png    -> Zelfgemaakt
