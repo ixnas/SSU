@@ -10,8 +10,8 @@ import nl.han.ica.OOPDProcessingEngineHAN.Collision.ICollidableWithGameObjects;
 import java.util.List;
 
 /**
- * @author Ralph Niels
- * De spelerklasse (het paarse visje)
+ * @author Ivo Reumkens & Sjoerd Scheffers
+ * De spelerklasse
  */
 public class Player extends AnimatedSpriteObject implements ICollidableWithGameObjects, IAlarmListener {
 

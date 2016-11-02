@@ -37,7 +37,7 @@ public abstract class Enemy extends SpriteObject implements ICollidableWithGameO
             deleteSchip();
         }
         if (health <= 0) {
-        	world.increaseScore (5);
+        	// world.increaseScore (5);
         	world.deleteGameObject (this);
         }
     }

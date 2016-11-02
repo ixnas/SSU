@@ -4,7 +4,7 @@ import nl.han.ica.OOPDProcessingEngineHAN.Dashboard.Dashboard;
 import nl.han.ica.OOPDProcessingEngineHAN.Persistence.FilePersistence;
 import nl.han.ica.OOPDProcessingEngineHAN.Persistence.IPersistence;
 
-public abstract class StartGame {
+public class StartGame {
 	
 	private Spaceworld world;
 	private TextObject dashboardText;
@@ -14,9 +14,12 @@ public abstract class StartGame {
     private int highscore;
     private IPersistence persistence;
     
-    public void StartGame(Spaceworld world) {
+    public StartGame(Spaceworld world) {
     	this.world = world;
+    	
     	world.deleteAllGameOBjects();
+    	world.deleteAllDashboards();
+    	
     	createObjects();
     	createEnemySpawner();	
     	initializePersistence();
