@@ -12,7 +12,6 @@ import java.util.List;
  */
 public class Kogel extends SpriteObject implements ICollidableWithGameObjects {
 
-	private final Sound kogelSound;
 	private final Spaceworld world;
 	private final int kogelWidth = 8;
 	private final int kogelHeight = 30;
@@ -30,7 +29,6 @@ public class Kogel extends SpriteObject implements ICollidableWithGameObjects {
 	public Kogel (Spaceworld world, Sound kogelSound, boolean speler, String pad) {
 		super (new Sprite (pad));
 		this.world = world;
-		this.kogelSound = kogelSound;
 		if (speler) {
 			setySpeed (-6);
 		} else {
