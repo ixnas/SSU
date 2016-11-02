@@ -17,6 +17,7 @@ public class Spaceworld extends GameEngine {
 	private Sound backgroundSound;
 	public Sound kogelSound;
 	private TextObject dashboardText;
+	@SuppressWarnings ("unused")
 	private EnemySpawner enemySpawner;
 	private int score;
 	private IPersistence persistence;
@@ -82,7 +83,7 @@ public class Spaceworld extends GameEngine {
 	}
 
 	/**
-	 * Maakt de spawner voor de bellen aan
+	 * Maakt de spawner voor de enemies aan
 	 */
 	public void createEnemySpawner () {
 		final float enemysPerSecond = score / 100 + 1;
