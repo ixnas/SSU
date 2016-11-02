@@ -45,9 +45,9 @@ public abstract class Enemy extends SpriteObject implements ICollidableWithGameO
 	}
 
 	public void dropItem () {
-		if (Math.random () > 0.05) {
+		if (Math.random () > 0.90) {
 			LevensPakket levenspakket = new LevensPakket (world);
-			world.addGameObject (levenspakket, getX (), getY ());
+			world.addGameObject (levenspakket, getX () + getWidth ()/2-20, getY () + getHeight ()-20);
 		}
 	}
 

@@ -29,7 +29,7 @@ public class Player extends AnimatedSpriteObject implements ICollidableWithGameO
 	 *            Referentie naar de wereld
 	 */
 	public Player (Spaceworld world) {
-		super (new Sprite ("src/main/java/nl/han/ica/spaceworld/media/player.png"), 3);
+		super (new Sprite ("src/main/java/nl/han/ica/spaceworld/media/spelerschip.png"), 3);
 		this.world = world;
 		setCurrentFrameIndex (2);
 		setFriction (0.30f);

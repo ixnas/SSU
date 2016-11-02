@@ -18,11 +18,9 @@ public class LevensPakket extends SpriteObject implements ICollidableWithGameObj
 	}
 	
 	public void update () {
-		/*
 		if (getY () > world.getHeight () + getHeight ()) {
 			world.deleteGameObject (this);
 		}
-		*/
 	}
 	
 	public void gameObjectCollisionOccurred (List <GameObject> collidedGameObjects) {

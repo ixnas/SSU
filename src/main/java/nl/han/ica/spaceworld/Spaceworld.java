@@ -67,7 +67,7 @@ public class Spaceworld extends GameEngine {
 	 * Initialiseert geluid
 	 */
 	private void initializeSound () {
-		backgroundSound = new Sound (this, "src/main/java/nl/han/ica/spaceworld/media/main.mp3");
+		backgroundSound = new Sound (this, "src/main/java/nl/han/ica/spaceworld/media/bg.mp3");
 		backgroundSound.loop (-1);
 		kogelSound = new Sound (this, "src/main/java/nl/han/ica/spaceworld/media/colt45.wav");
 
