@@ -48,7 +48,11 @@ public class Player extends AnimatedSpriteObject implements ICollidableWithGameO
 			setX (world.getWidth () - size);
 		}
 		if (getHealth () <= 0) {
+			health = 0;
 			world.deleteGameObject (this);
+		}
+		if (getHealth () > 100) {
+			health = 100;
 		}
 		if (naarlinks) {
 			setDirectionSpeed (270, speed);
@@ -107,10 +111,12 @@ public class Player extends AnimatedSpriteObject implements ICollidableWithGameO
 			} else if (g instanceof Kogel) {
 				health = health - 10;
 				world.deleteGameObject (g);
+			} else if (g instanceof LevensPakket) {
+				health = health + 40;
 			}
 		}
 	}
-
+	
 	private void startAlarm () {
 		final double alarmTijd = 1 / kogelsPerSeconde;
 		final Alarm alarm = new Alarm ("Kogel klaar", alarmTijd);

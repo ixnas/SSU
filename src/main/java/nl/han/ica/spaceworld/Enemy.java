@@ -38,13 +38,17 @@ public abstract class Enemy extends SpriteObject implements ICollidableWithGameO
 			deleteSchip ();
 		}
 		if (health <= 0) {
+			dropItem ();
 			world.increaseScore (5);
 			world.deleteGameObject (this);
 		}
 	}
 
 	public void dropItem () {
-
+		if (Math.random () > 0.05) {
+			LevensPakket levenspakket = new LevensPakket (world);
+			world.addGameObject (levenspakket, getX (), getY ());
+		}
 	}
 
 	public void schiet () {
