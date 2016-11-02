@@ -44,7 +44,7 @@ public class Kogel extends SpriteObject {
 
 	@Override
 	public void update () {
-		if (getY () <= -kogelHeight) {
+		if (getY () < -kogelHeight || getY () > world.getHeight ()) {
 			world.deleteGameObject (this);
 		}
 	}
