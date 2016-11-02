@@ -10,7 +10,7 @@ import java.util.Random;
  */
 public class EnemySpawner implements IAlarmListener {
 
-	private final float enemysPerSecond;
+	private float enemysPerSecond;
 	private final Random random;
 	private final Spaceworld world;
 
@@ -41,6 +41,7 @@ public class EnemySpawner implements IAlarmListener {
 	public void triggerAlarm (String alarmName) {
 		// type enemy bepalen
 		final int enemyType = random.nextInt (100) + 0;
+		enemysPerSecond = world.geefScore ()/100+1;
 
 		// enemy aanmaken
 		if (enemyType >= 0 && enemyType <= 60) {

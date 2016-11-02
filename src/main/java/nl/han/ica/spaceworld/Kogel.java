@@ -1,16 +1,13 @@
 package nl.han.ica.spaceworld;
 
-import nl.han.ica.OOPDProcessingEngineHAN.Collision.ICollidableWithGameObjects;
-import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.SpriteObject;
 import nl.han.ica.OOPDProcessingEngineHAN.Sound.Sound;
-import java.util.List;
 
 /**
  * @author Ralph Niels Bel-klasse
  */
-public class Kogel extends SpriteObject implements ICollidableWithGameObjects {
+public class Kogel extends SpriteObject {
 
 	private final Spaceworld world;
 	private final int kogelWidth = 8;
@@ -52,14 +49,4 @@ public class Kogel extends SpriteObject implements ICollidableWithGameObjects {
 		}
 	}
 
-	@Override
-	public void gameObjectCollisionOccurred (List <GameObject> collidedGameObjects) {
-		for (final GameObject g : collidedGameObjects) {
-			if (g instanceof Enemy) {
-				// TODO: speel geluid als je schip raakt en delete groenschip
-				// GroenSchip.deleteSchip();
-				world.deleteGameObject (this);
-			}
-		}
-	}
 }

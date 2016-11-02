@@ -87,7 +87,7 @@ public abstract class Enemy extends SpriteObject implements ICollidableWithGameO
 	@Override
 	public void gameObjectCollisionOccurred (List <GameObject> collidedGameObjects) {
 		for (final GameObject g : collidedGameObjects) {
-			if (g instanceof Kogel) {
+			if (g instanceof PlayerKogel) {
 				// TODO: speel geluid als je schip raakt en delete groenschip
 				// GroenSchip.deleteSchip();
 				health = health - 10;

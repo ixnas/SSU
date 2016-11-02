@@ -137,4 +137,8 @@ public class Spaceworld extends GameEngine {
 		persistence.saveData (Integer.toString (score));
 		refreshDasboardText ();
 	}
+	
+	public int geefScore () {
+		return score;
+	}
 }
